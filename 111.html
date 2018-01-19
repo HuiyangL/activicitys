@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content=" width=device-width initial-scale=1.0
+    minmum-scale=1.0 maxmum=1.0 user-scalable=no">
+    <title></title>
+    <script src="js/rem.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/check.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--首页-->
+<section class="index">
+    <div>
+        <div class="img1">
+            <img src="img/1.png" alt="" imgData="1">
+        </div>
+        <div class="img2">
+            <img src="img/2.png" alt="" imgData="2">
+        </div>
+        <div class="progress">
+            <img src="img/full.png" alt="" imgData="full">
+        </div>
+        <img src="img/4.png" alt="" imgData="4">
+
+    </div>
+</section>
+
+
+<!--开始测试-->
+<section class="start">
+    <div>
+        <img src="img/5.png" alt="" imgData="5">
+        <div class="img6">
+            <img src="img/6.png" alt="" imgData="6">
+        </div>
+        <img src="img/7.png" alt="" imgData="7" class="img7">
+        <div class="shengming">
+            <div class="img8">
+                <img src="img/8.png" alt="" imgData="8">
+            </div>
+            <div class="img9">
+                <img src="img/9.png" alt="" imgData="9">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--答题部分-->
+<section class="test">
+    <div>
+        <audio src="music/1.m4a" controls="controls"></audio>
+        <img src="img/10.png" alt="" imgData="10">
+        <ul class="tihao tihao1">
+            <li class="active">
+                1
+            </li>
+            <li>
+                2
+            </li>
+            <li>
+                3
+            </li>
+            <li>
+                4
+            </li>
+            <li>
+                5
+            </li>
+        </ul>
+
+        <div class="timeBox">00:<span class="time">30</span></div>
+        <div class="img11">
+            <img src="img/11.png" alt="" imgData="11">
+            <img src="img/12.png" alt="" imgData="12" class="hand">
+            <div class="voice">
+                <img src="img/13.png" alt="" imgData="13" name="myImage">
+            </div>
+        </div>
+
+        <div class="question">
+
+        </div>
+
+        <div class="next next1">
+            <img src="img/16.png" alt="" imgData="16">
+        </div>
+    </div>
+</section>
+
+<!--查看结果-->
+
+
+
+<!--答对0道题-->
+<section class="zero">
+    <div>
+        <img src="img/zero.png" alt="" imgData="zero">
+        <div class="official">
+            <img src="img/official.png" alt="" imgData="official" class="000">
+            <img src="img/close.png" alt="" imgData="close" class="close">
+        </div>
+
+        <img src="img/zero1.png" alt="" imgData="zero1" class="zero1">
+        <div class="desc">
+            客官，这次没有答对不要气馁，下次答对可能就是你了哟
+        </div>
+        <div class="again">
+            <img src="img/again.png" alt="" imgData="again">
+        </div>
+        <div class="show">
+            <img src="img/show.png" alt="" imgData="show">
+        </div>
+    </div>
+</section>
+
+<!--答对大于0道题少于5道题-->
+<section class="more">
+    <div>
+        <img src="img/more.png" alt="" imgData="more">
+        <div class="official">
+            <img src="img/official.png" alt="" imgData="official">
+            <img src="img/close.png" alt="" imgData="close" class="close">
+        </div>
+        <img src="img/oneTitle.png" alt="" imgData="oneTitle" class="oneTitle">
+        <img src="img/one1.png" alt="" imgData="one1" class="zero1">
+        <div class="desc">
+            哎呦，大官人你获得了冒冒的超私密礼物！快去冒泡公众号走一波。
+        </div>
+        <div class="again">
+            <img src="img/again.png" alt="" imgData="again">
+        </div>
+        <div class="show">
+            <img src="img/show.png" alt="" imgData="show">
+        </div>
+    </div>
+</section>
+
+
+<!--用户登记-->
+<section class="register">
+    <div>
+        <img src="img/register.png" alt="" imgData="register">
+        <form action="" class="registerForm">
+            <div class="formGroup">
+                <img src="img/name.png" alt="" imgData="name">
+                <input type="text" name="name" id="name" placeholder="请输入你的真实姓名" data-validate="require:必填项;name:请填写最少为一个字的姓名">
+                <!--<div class="form-help">必填项</div>-->
+            </div>
+            <div class="formGroup">
+                <img src="img/phone.png" alt="" imgData="phone">
+                <input type="number" oninput="if(value.length>11)value=value.slice(0,11)" name="phone" id="phone" placeholder="请输入你的联系电话" data-validate="require:必填项;phone:请填写11位的手机号码">
+            </div>
+            <div class="formGroup">
+                <img src="img/address.png" alt="" imgData="address">
+                <textarea name="" maxlength="40" minlength="30" name="address" id="address" placeholder="请输入你的真实地址" data-validate="require:必填项;address:请填写字数为30~40的地址"></textarea>
+            </div>
+            <div class="formGroup">
+                <img src="img/win.png" alt="" imgData="win" class="win">
+                <input type="number" oninput="if(value.length>6)value=value.slice(0,6)" name="win" id="win" placeholder="请输入你的中奖码" data-validate="require:必填项;win:请填写6位数的中奖码">
+            </div>
+        </form>
+        <div class="submit">
+            <img src="img/confirmBtn1.png" alt="" imgData="confirmBtn1">
+        </div>
+    </div>
+
+</section>
+
+
+<!--中奖关注公众号界面-->
+<section class="winner">
+    <div>
+        <img src="img/winner.png" alt="" imgData="winner">
+        <div class="codeBox">
+            &nbsp;&nbsp;中奖码：<span class="code">123456</span>
+        </div>
+    </div>
+</section>
+
+
+<!--数据统计-->
+<script>
+    var _mtac = {};
+    (function() {
+        var mta = document.createElement("script");
+        mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.2";
+        mta.setAttribute("name", "MTAH5");
+        mta.setAttribute("sid", "500576946");
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(mta, s);
+    })();
+</script>
+
+</body>
+</html>

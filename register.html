@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1">
+    <title></title>
+    <script src="js/rem.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/check.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--用户登记-->
+<section class="register">
+    <div>
+        <img src="" alt="" imgData="register">
+        <form action="" class="registerForm">
+            <div class="formGroup">
+                <img src="" alt="" imgData="name">
+                <input type="text" name="name" id="name" placeholder="请输入你的真实姓名" data-validate="require:必填项;name:请填写最少为一个字的姓名">
+                <!--<div class="form-help">必填项</div>-->
+            </div>
+            <div class="formGroup">
+                <img src="" alt="" imgData="phone">
+                <input type="number" oninput="if(value.length>11)value=value.slice(0,11)" name="phone" id="phone" placeholder="请输入你的联系电话" data-validate="require:必填项;phone:请填写11位的手机号码">
+            </div>
+            <div class="formGroup">
+                <img src="" alt="" imgData="address">
+                <textarea name="" maxlength="40" minlength="30" name="address" id="address" placeholder="请输入你的真实地址" data-validate="require:必填项;address:请填写字数为30~40的地址"></textarea>
+            </div>
+            <div class="formGroup">
+                <img src="" alt="" imgData="win" class="win">
+                <input type="number" oninput="if(value.length>6)value=value.slice(0,6)" name="win" id="win" placeholder="请输入你的中奖码" data-validate="require:必填项;win:请填写6位数的中奖码">
+            </div>
+        </form>
+        <div class="submit">
+            <img src="" alt="" imgData="confirmBtn1">
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

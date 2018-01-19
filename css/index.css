@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+body{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+
+/*首页*/
+section{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.index{
+    display: none;
+}
+section>div{
+    width:100%;
+    height:100%;
+    position: relative;
+    overflow: hidden;
+}
+.progress{
+    position: absolute;
+    width:85.33%;
+    height:0.4rem;
+    border-top:0.04rem solid #000;
+    border-bottom:0.06rem solid #000;
+    border-left:0.05rem solid #000;
+    border-right:0.05rem solid #000;
+    border-radius:0.3rem;
+    overflow: hidden;
+    top:6.47rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.progress>img{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:-100%;
+}
+img{
+    width:100%;
+    height:100%;
+}
+.img2{
+    width:33.33%;
+    height:2.5rem;
+    position: absolute;
+    top:3.2rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+[imgdata="img4"]{
+    width:36.667%;
+    height:0.24rem;
+    position: absolute;
+    top:7.62rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+
+/*开始测试*/
+.start{
+    display: none;
+}
+[imgdata="img5"]{
+    width:100%;
+    height:100%;
+}
+.cont{
+    width:100%;
+    height:100%;
+}
+.img6{
+    width:45.33%;
+    height:1.06rem;
+    position: absolute;
+    top:9.16rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.img7{
+    width:28.6%;
+    height:0.24rem;
+    position: absolute;
+    bottom:1.6rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.img8{
+    width:95.2%;
+    height:11.74rem;
+    position: absolute;
+    top:0.73rem;
+    left:3.867%;
+}
+.img9{
+    width:9.333%;
+    height:0.69rem;
+    position: absolute;
+    top:1.15rem;
+    right:0.08rem;
+}
+.shengming{
+    display: none;
+}
+
+
+/*答题部分*/
+.test{
+   /*display: none;*/
+}
+audio{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.tihao{
+    width:82%;
+    height:0.72rem;
+    position: absolute;
+    top:0.4rem;
+    left:12.53%;
+}
+.tihao>li{
+    width:0.72rem;
+    height:0.72rem;
+    border:0.04rem solid #000000;
+    box-sizing: border-box;
+    margin-right:0.48rem;
+    border-radius: 50%;
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height:0.64rem;
+    color: #ffffff;
+    font-family: sans-serif;
+    background: #2f95ab;
+    float: left;
+}
+.tihao1>li{
+    background: #b6b1b7;
+}
+.tihao1>li.active{
+    background: #2f95ab;
+}
+.timeBox{
+    width:16%;
+    hieght:0.46rem;
+    position: absolute;
+    top:1.38rem;
+    left:79%;
+    line-height: 0.46rem;
+    font-size:.42rem;
+    font-family:黑体;
+}
+.img11{
+    width:32.93%;
+    height:1.98rem;
+    position: absolute;
+    top:2.91rem;
+    /*top:19%;*/
+    left:0;
+    right:0;
+    margin:auto;
+}
+.hand{
+    width:1.33rem;
+    height:1.89rem;
+    position: absolute;
+    top:0.9rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.voice{
+    width:0.72rem;
+    height:1.1rem;
+    position: absolute;
+    top:-.19rem;
+    right:-0.72rem;
+    display: none;
+}
+.question{
+    width:100%;
+    height:4.2rem;
+    /*height:41%;*/
+    position: absolute;
+    top:5.86rem;
+    left:0;
+    text-align: center;
+}
+
+.title{
+    width:90%;
+    margin:0.2rem auto;
+    font-size:0.4rem;
+    font-family: 黑体;
+    line-height: 0.5rem;
+    font-weight:bold;
+}
+
+.optionCont{
+    width:68%;
+    margin:auto;
+    height:calc(4.2rem - 0.9rem);
+    line-height: 0.7rem;
+    font-size:0.24rem;
+    text-align: left;
+}
+.optionBox{
+    width:0.36rem;
+    height:0.36rem;
+    border-radius: 50%;
+    border:0.03rem solid #000000;
+    overflow: hidden;
+    float: left;
+    margin-top:0.16rem;
+    position: relative;
+}
+.optionBox>img{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.optionCont p{
+    padding-left:0.6rem;
+}
+.next{
+    width:45.3%;
+    height:1.06rem;
+    position: absolute;
+    bottom:2rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.hidden{
+    display: none;
+}
+
+
+/*查看结果页面*/
+.result{
+    display: none;
+}
+
+/*答对0道题界面*/
+.zero{
+    display: none;
+}
+.official{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100;
+    background-color: rgba(0,0,0,.5);
+    display:none;
+}
+.official>img{
+    width:80.4%;
+    height:11.4rem;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.official>.close{
+    width:0.7rem;
+    height:0.7rem;
+    position: absolute;
+    top:1.15rem;
+    left:5.65rem;
+    margin:0;
+}
+.zero1{
+    width:68.26667%;
+    height:3.91rem;
+    position: absolute;
+    left:0;
+    right:0;
+    top:3.1rem;
+    margin:auto;
+}
+.prize,.again{
+    width:45.2%;
+    height:1.05rem;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:3.97rem;
+    margin:auto;
+}
+.show{
+    width:45.2%;
+    height:1.05rem;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:2.41rem;
+    margin:auto;
+}
+.desc{
+    width:84.4%;
+    position: absolute;
+    left:0;
+    right:0;
+    top:7.35rem;
+    margin:auto;
+    text-align: center;
+    line-height:0.34rem;
+    font-family: 黑体;
+    font-size:0.24rem;
+}
+
+
+/*答对0道题以上*/
+.more{
+    display: none;
+}
+.oneTitle{
+    width:43.6%;
+    height:0.36rem;
+    position: absolute;
+    left:0;
+    right:0;
+    top:2.42rem;
+    margin:auto;
+}
+
+/*用户注册页面*/
+.register{
+    display: none;
+}
+.registerForm{
+    width:72.2667%;
+    height:auto;
+    position: absolute;
+    left:0;
+    right:0;
+    top:5.4rem;
+    margin:auto;
+}
+.formGroup{
+    width:100%;
+    height:1.05rem;
+}
+.formGroup:nth-child(3){
+    height:2.39rem;
+}
+.formGroup>img{
+    float: left;
+    width:1.21rem;
+    height:0.32rem;
+    margin-top:0.2rem;
+}
+.formGroup>input{
+    float: right;
+    width:4.1rem;
+    height:0.72rem;
+    border:0.03rem solid #000;
+    border-radius: 0.1rem;
+    outline: none;
+    padding:0 0.1rem;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+     　　color: #666;font-size:16px;
+ }
+.formGroup>.win{
+    width:0.91rem;
+}
+.formGroup>textarea{
+    float: right;
+    width:4.1rem;
+    height:2.06rem;
+    border:0.03rem solid #000;
+    border-radius: 0.1rem;
+    outline: none;
+    padding:0.1rem 0.1rem;
+    resize: none;
+}
+.submit{
+    width:45.2%;
+    height:1.05rem;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0.89rem;
+    margin:auto;
+}
+.form-help{
+    padding:0.03rem;
+    color: #000000;
+    font-size:14px;
+    margin-left:1.3rem;
+    line-height: 0.3rem;
+}
+
+/*中奖关注公众号界面*/
+
+.winner{
+    display:none;
+}
+.codeBox{
+    width:48.7%;
+    height:0.8rem;
+    position: absolute;
+    left:0;
+    right:0;
+    top:6.475rem;
+    margin:auto;
+    font-weight:bold;
+    font-size:0.42rem;
+    line-height:0.8rem;
+    color: #f00f47;
+    font-family: 黑体;
+}
+
+/*分享页面*/
+.back{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    background:rgba(0,0,0,0.5);
+    display: none;
+}
+.black{
+    width:53.33%;
+    height:2.91rem;
+    position:absolute;
+    top:1rem;
+    right:0.8rem;
+    z-index:2;
+}
+
