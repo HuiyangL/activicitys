@@ -55,14 +55,6 @@ $(function () {
          {id:28,title:"请问你听到的是剧中哪两个人物的对白？",options:['张国荣和张丰毅','项羽和虞姬','程蝶衣和段小楼','段小楼和菊仙'],answer:'程蝶衣和段小楼',url:'music/29.m4a'},
          {id:29,title:"请问你听到的是佩奇和谁的对话？",options:['苏西','乔治','瑞贝卡','佩德罗'],answer:'乔治',url:'music/30.m4a'}
      ];*/
-
-   var list=[
-       {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
-       {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
-       {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
-       {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
-       {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
- ]
     var result = [{ id: 0, title: "", desc: "", img: ["img/zero1.png", "img/zero2.png", "img/zero3.png", "img/zero4.png"] }, { id: 1, title: "img/oneTitle.png", desc: "客官，再答对4题就可以获得人家嘿嘿嘿的礼物了哟", img: ["img/one1.png", "img/one2.png", "img/one3.png"] }, { id: 2, title: "img/twoTitle.png", desc: "客官，再答对3题就可以获得人家嘿嘿嘿的礼物了哟", img: ["img/two1.png", "img/two2.png", "img/two3.png", "img/two4.png"] }, { id: 3, title: "img/threeTitle.png", desc: "客官，再答对2题就可以获得人家嘿嘿嘿的礼物了哟", img: ["img/three1.png", "img/three2.png", "img/three3.png"] }, { id: 4, title: "img/fourTitle.png", desc: "客官，再答对1题就可以获得人家嘿嘿嘿的礼物了哟", img: ["img/four1.png", "img/four2.png"] }, { id: 5, title: "img/fiveTitle.png", desc: "哎呦，大官人你获得了冒冒的超私密礼物！快去冒泡公众号走一波。", img: ["img/five1.png", "img/five2.png"] }];
 
     var playnum; //已玩次数
@@ -108,7 +100,6 @@ $(function () {
 
     ///////////////////////////开始测试部分///////////////////////////////////
     $(".img7").click(function () {
-        alert(1)
         $(".shengming").css({ display: "block" });
     });
     $(".img9").click(function () {
@@ -123,21 +114,21 @@ $(function () {
 
         openId = location.search.slice(location.search.indexOf('=') + 1);
 
-        // $.ajax({
-        //     // contentType: 'application/json',
-        //     type: "post",
-        //     dataType: 'json',
-        //     data: { "openId": openId },
-        //     url: 'http://api-activity.91yuebei.com/active/geRandomFive',
-        //     // url:'http://192.168.118.98:8007/active/geRandomFive',
-        //     success: function success(datas) {
-        //         console.log(datas);
-                // if (datas.code == 6008) {
-                //     $('.official').css({ display: "block" });
-                //     return;
-                // } else if (datas.code == 1000) {
-                //     playnum = datas.data.gameCount;
-                    songlist = list;
+        $.ajax({
+            // contentType: 'application/json',
+            type: "post",
+            dataType: 'json',
+            data: { "openId": openId },
+            url: 'http://api-activity.91yuebei.com/active/geRandomFive',
+            // url:'http://192.168.118.98:8007/active/geRandomFive',
+            success: function success(datas) {
+                console.log(datas);
+                if (datas.code == 6008) {
+                    $('.official').css({ display: "block" });
+                    return;
+                } else if (datas.code == 1000) {
+                    playnum = datas.data.gameCount;
+                    songlist = datas.data.list;
                     index = 0;
                     xuhao = $(".tihao1>li");
                     right = 0; //答对题的数目
@@ -156,10 +147,10 @@ $(function () {
                         $(this).css({ display: "none" });
                     });
                     $("section.test").css({ display: "block" });
-                // }
-            // }
+                }
+            }
 
-        // });
+        });
     });
 
     ////////////////////////////答题部分///////////////////////////
@@ -204,7 +195,7 @@ $(function () {
 
     /*马上领奖*/
     $('.prize').click(function () {
-        /*$.ajax({
+        $.ajax({
             // contentType: 'application/json',
             type: "post",
             dataType: 'json',
@@ -215,7 +206,7 @@ $(function () {
                 $('.code').html(win.data);
             }
 
-        });*/
+        });
         $("section").each(function () {
             $(this).css({ display: "none" });
         });
@@ -331,11 +322,11 @@ $(function () {
 
     //////////////////答题结果///////////////////////////////////
     $('.again').on("click", function () {
-        // playnum--;
-        // if (playnum == 0) {
-        //     $('.official').css({ display: "block" });
-        //     return;
-        // }
+        playnum--;
+        if (playnum == 0) {
+            $('.official').css({ display: "block" });
+            return;
+        }
         $("section").each(function () {
             $(this).css({ display: "none" });
         });
@@ -365,7 +356,7 @@ $(function () {
 });
 
 /////////////////////////用户信息//////////////////////////
-// console.log($('.code'));
+console.log($('.code'));
 $('.code').click(function () {
     $("section").each(function () {
         $(this).css({ display: "none" });
