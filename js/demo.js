@@ -57,8 +57,8 @@ $(function () {
      ];*/
 
    var list=[
-       {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
-       {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
+       {content: "请问语音中的姑娘，是哪个少数民族的人？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
+       {content: "请问语音中的姑娘，是哪个少数民族的人？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
        {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
        {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
        {content: "请问你听到的歌叫什么？", optionA: "A.《PPAP》", optionB: "B.《PAAP》", optionC: "C.《APPLE》", optionD: "D. 《PAPP》",correctKey:"A",mediaUrl:'music/12.m4a'},
@@ -90,10 +90,10 @@ $(function () {
         //      $(this).attr("src",`img/${$(this).attr("imgData")}.png`)
         $(this).attr("src", "img/" + $(this).attr("imgData") + ".png");
         if (i == Math.round(imgs.length / 3 * 1)) {
-            $('.full').animate({ left: "-70%" }, 2000);
+            $('.full').animate({ left: "-70%" },0);
         }
         if (i == Math.round(imgs.length / 3 * 2)) {
-            $('.full').animate({ left: "-40%" }, 2000);
+            $('.full').animate({ left: "-40%" },0);
         }
         if (i == imgs.length - 1) {
             $('.full').animate({ left: 0 }, 0).queue(function () {
@@ -108,7 +108,6 @@ $(function () {
 
     ///////////////////////////开始测试部分///////////////////////////////////
     $(".img7").click(function () {
-        alert(1)
         $(".shengming").css({ display: "block" });
     });
     $(".img9").click(function () {
