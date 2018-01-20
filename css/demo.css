@@ -122,7 +122,7 @@ img{
     width:9.333%;
     height:0.69rem;
     position: absolute;
-    top:1.15rem;
+    top:0.5rem;
     right:0.08rem;
 }
 .shengming{
@@ -132,7 +132,7 @@ img{
 
 /*答题部分*/
 .test{
-   /*display: none;*/
+    /*display: none;*/
 }
 audio{
     position: absolute;
@@ -392,8 +392,8 @@ audio{
     padding:0 0.1rem;
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-     　　color: #666;font-size:16px;
- }
+    　　color: #666;font-size:16px;
+}
 .formGroup>.win{
     width:0.91rem;
 }

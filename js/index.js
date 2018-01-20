@@ -105,9 +105,9 @@ $(function () {
    img9.onclick=function(){
        document.querySelector(".shengming").style.display='none';
    }
-    /*$(".img9").click(function () {
+    $(".img9").click(function () {
         $(".shengming").css({ display: "none" });
-    });*/
+    });
 
   /* $(".img8").click(function () {
        $(".img9").trigger('click');
