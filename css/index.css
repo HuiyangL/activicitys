@@ -30,9 +30,11 @@ section{
     display: none;
 }
 section>div{
+    position: absolute;
+    top:0;
+    bottom:0;
     width:100%;
     height:100%;
-    position: relative;
     overflow: hidden;
 }
 .progress{
@@ -96,24 +98,29 @@ img{
 .img6{
     width:45.33%;
     height:1.06rem;
-    position: absolute;
-    top:7.16rem;
+    margin:0 auto;
+    margin-top:8.16rem;
+    /*position: absolute;
+    top:9.16rem;
     left:0;
     right:0;
-    margin:auto;
+    margin:auto;*/
 }
 .img7{
+    display: block;
     width:28.6%;
     height:0.24rem;
-    position: absolute;
+    margin: 0 auto;
+    margin-top:0.5rem;
+   /* position: absolute;
     bottom:3.6rem;
     left:0;
-    right:0;
-    margin:auto;
+    right:0;*/
+
 }
 .img8{
     width:95.2%;
-    height:11.74rem;
+    height:88%;
     position: absolute;
     top:0.33rem;
     left:3.867%;
